@@ -34,16 +34,17 @@ while not finishedExecuting:
     while not num1Valid:
         try:
             num1 = input("Please enter a valid number")
-            check_num1 = isinstance(int(num1), int)
-            num1Valid = check_num1
+
+            if isinstance(float(num1), float):
+                num1Valid = True
         except ValueError:
             print("That is not a valid number, please try again")
 
     while not num2Valid:
         try:
             num2 = input("Please enter a valid number")
-            check_num2 = isinstance(int(num2), int)
-            num2Valid = check_num2
+            if isinstance(float(num2), float):
+                num2Valid = True
         except ValueError:
             print("That is not a valid number, please try again")
 
